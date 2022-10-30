@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Home Section Starts*/
+.btn{
+    border-radius: none !important;
+    box-shadow: none !important;
+    border: 2px solid black;
+    color: black;
+    padding: 15px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+/* Home Section Ends*/
+
+.text-center{
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.card{
+    border-radius: 0;
+}
+
+/* Preview Starts */
+.gallery .image img{
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 7%;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: black;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+
+.preview-box .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.details .title p{
+    margin: 0 5px;
+}
+
+.details .title p.current-img{
+    font-weight: 500;
+}
+
+.details .icon{
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.preview-box .image-box{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.image-box .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.slide.prev{
+    left: 0px;
+}
+
+.slide.next{
+    right: 0px;
+}
+
+.image-box img{
+    width: 100%;
+    border-radius: 0;
+}
+/* Preview Ends */
+
+/* Isotope Btn Start */
+.text-center button{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-check:active+.btn-outline-dark, .btn-check:checked+.btn-outline-dark, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show, .btn-outline-dark:active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+/* Isotope Btn Ends */
+
+/* Costom Scroll Bar */
+::-webkit-scrollbar{
+    color: black;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+/* Costom Scroll Bar */
+
+.pic .image img {
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.pic .image img:hover{
+    filter: grayscale(0%);  
+}
+
+@media screen and (max-width: 575px){
+    .mob{
+        font-size: 8px!important;
+    }
+}
